@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8560204527729129371}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShotPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7496838949516303834}
   - component: {fileID: 543371084018656008}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,16 +76,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb20e01cb170eaf4e9aba05ecbb2e42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _type: 1
+  _type: 0
   def:
     type: 0
     letter: 
-    powerUpCube: {r: 1, g: 1, b: 1, a: 1}
+    powerUpColor: {r: 1, g: 1, b: 1, a: 1}
     weaponModelPrefab: {fileID: 0}
     projectilePrefab: {fileID: 0}
     projectileColor: {r: 1, g: 1, b: 1, a: 1}
     damageOnHit: 0
     damagePerSec: 0
-    delatBetweenShots: 0
+    delayBetweenShots: 0
     velocity: 50
   nextShotTime: 0

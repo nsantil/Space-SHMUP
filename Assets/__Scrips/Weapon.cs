@@ -20,7 +20,7 @@ public class WeaponDefinition
     [Tooltip("Letter to show on the PowerUp Cube")]
     public string letter;
     [Tooltip("Color of PowerUp Cube")]
-    public Color powerUpCube = Color.white;
+    public Color powerUpColor = Color.white;
     [Tooltip("Prefab of Weapon model that is attached to the Player Ship")]
     public GameObject weaponModelPrefab;
     [Tooltip("Prefab of projectile that is fired")]
@@ -89,12 +89,16 @@ public class Weapon : MonoBehaviour{
         else
         {
             this.gameObject.SetActive(true);
-        }   
+        }  
+        
+
     //gET THE WEAPON DEF FOR THIS TYPE FROM MAIN   
     def = Main.GET_WEAPON_DEFINITION(_type);
+
+
    // destroy any old model and then attach a model for this weapon
    if(weaponModel != null) Destroy(weaponModel);
-   weaponModel = Instantiate<GameObject>(def.weaponModelPrefab, transform);
+        weaponModel = Instantiate<GameObject>(def.weaponModelPrefab, transform);
         weaponModel.transform.localPosition = Vector3.zero;
         weaponModel.transform.localScale = Vector3.one;
 
