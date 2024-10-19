@@ -10,7 +10,7 @@ public enum eWeaponType
     phaser, // shat that moves in waves
     missle, // homing missle
     laser, // damage over time
-    sheild // raises sheild level
+    shield // raises shield level
 }
 
 [System.Serializable]

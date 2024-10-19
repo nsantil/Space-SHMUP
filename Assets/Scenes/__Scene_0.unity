@@ -215,7 +215,7 @@ Transform:
   m_GameObject: {fileID: 82570263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 10}
-  m_LocalScale: {x: 80, y: 80, z: 1}
+  m_LocalScale: {x: 160, y: 160, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -676,7 +676,7 @@ Transform:
   m_GameObject: {fileID: 879647454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 160, y: 160, z: 1}
+  m_LocalScale: {x: 200, y: 200, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -896,7 +896,7 @@ MonoBehaviour:
   enemySpawnPerSecond: 0.5
   enemyInsetDefault: 1.5
   gameRestartDelay: 2
-  prefabPowerUp: {fileID: 4398798064522711708, guid: c10428d599268cf429010e520c81ac81, type: 3}
+  prefabPowerUp: {fileID: 3866551198098124970, guid: b752810b448a1eb4bb736cc184d1363b, type: 3}
   weaponDefinitions:
   - type: 1
     letter: B
@@ -1254,7 +1254,7 @@ Transform:
   m_GameObject: {fileID: 1792903474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5}
-  m_LocalScale: {x: 160, y: 160, z: 1}
+  m_LocalScale: {x: 200, y: 200, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

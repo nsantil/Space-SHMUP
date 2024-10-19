@@ -41,7 +41,6 @@ public class Hero : MonoBehaviour
         }
         //fireEvent += TempFire;
 
-        // reset the weapons to start heero with 1 blaster
         ClearWeapons();
         weapons[0].SetType(eWeaponType.blaster);
     }
@@ -94,14 +93,11 @@ public class Hero : MonoBehaviour
 
         Enemy enemy = go.GetComponent<Enemy>();
         PowerUp pUp = go.GetComponent<PowerUp>();
-
         if (enemy != null) // if the sheild was triggered by and enemy dec the level of sheiild by 1
         {
             shieldLevel--;
             Destroy(go);
-        }
-        else if(pUp != null)
-        {
+        }else if(pUp != null){
             AbsorbPowerUp(pUp);
         }
         else
@@ -110,29 +106,23 @@ public class Hero : MonoBehaviour
         }
     }
 
-    public void AbsorbPowerUp(PowerUp pUp)
-    {
-        Debug.Log("Absorbed PowerUp; "+ pUp.type);
-        switch (pUp.type)
-        {
-            case eWeaponType.sheild:
-                shieldLevel++;
-                break;
-
-            default:
-                if(pUp.type == weapons[0].type)
-                {
-                    Weapon weap = GetEmptyWeaponSlot();
-                    if(weap != null)
-                    {
-                        weap.SetType(pUp.type); 
-                    }
-                } else
-                {
-                    ClearWeapons();
-                    weapons[0].SetType(pUp.type);
+    public void AbsorbPowerUp(PowerUp pUp){
+        Debug.Log("Absorbed PowerUp:" + pUp.type);
+        switch (pUp.type){
+        case eWeaponType.shield:
+            shieldLevel++;
+            break;
+        default:
+            if(pUp.type == weapons[0].type){
+                Weapon weap = GetEmptyWeaponSlot();
+                if(weap != null){
+                    weap.SetType(pUp.type);
                 }
-                break;
+            }else{
+                ClearWeapons();
+                weapons[0].SetType(pUp.type);
+            }
+            break;
         }
         pUp.AbsorbedBy(this.gameObject);
     }
@@ -152,35 +142,21 @@ public class Hero : MonoBehaviour
             }
         }
     }
-    Weapon GetEmptyWeaponSlot()
-    {
-        for(int i=0; i < weapons.Length; i++)
-        {
-            if (weapons[i].type == eWeaponType.none)
-            {
-                return (weapons[i]);
+
+    Weapon GetEmptyWeaponSlot(){
+        for(int i=0;i<weapons.Length; i++){
+            if(weapons[i].type == eWeaponType.none){
+                return(weapons[i]);
             }
         }
+
         return (null);
     }
 
-
-   void ClearWeapons()
-    {
-        foreach(Weapon w in weapons)
-        {
+    void ClearWeapons(){
+        foreach(Weapon w in weapons){
             w.SetType(eWeaponType.none);
         }
     }
-
-
-
-
-
-
-
-
-
-
-
 }
+

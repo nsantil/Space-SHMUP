@@ -6,7 +6,7 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class BlinkColorOnHit : MonoBehaviour{
     private static float blinkDuration = .1f;
-    private static Color blickColor = Color.red;
+    private static Color blinkColor = Color.red;
 
     [Header("Dynamic")]
     public bool showingColor = false;
@@ -55,7 +55,7 @@ public class BlinkColorOnHit : MonoBehaviour{
     public void SetColors()
     {
         foreach(Material m in materials) {
-            m.color = blickColor;
+            m.color = blinkColor;
         }
         showingColor = true;
         blinkCompleteTime = Time.time + blinkDuration;
