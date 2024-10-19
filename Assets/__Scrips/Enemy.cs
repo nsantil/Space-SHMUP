@@ -11,7 +11,9 @@ public class Enemy : MonoBehaviour
     public float fireRate = 0.3f;
     public float health = 10;
     public int score = 100;
+    public float powerUpDropChance = 1f;
 
+    protected bool calledShipDestroyed = false;
     protected BoundsCheck bndCheck;
 
     private void Awake()
@@ -72,16 +74,44 @@ public class Enemy : MonoBehaviour
                 // If health is depleted, destroy the enemy
                 if (health <= 0)
                 {
+<<<<<<< HEAD
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+                    if(!calledShipDestroyed){
+                        calledShipDestroyed = true;
+                        Main.SHIP_DESTROYED(this);
+                    }
+=======
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> cb7e64d7f7ba45b40f4e2f67b9c79ae9128e3e59
+>>>>>>> Stashed changes
+                    if(!calledShipDestroyed)
+                    {
+                        calledShipDestroyed = true;
+                        Main.SHIP_DESTROYED(this);
+                    }
+                    //destroy this enemy
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+>>>>>>> cb7e64d7f7ba45b40f4e2f67b9c79ae9128e3e59
+=======
+>>>>>>> Stashed changes
+>>>>>>> cb7e64d7f7ba45b40f4e2f67b9c79ae9128e3e59
                     Destroy(this.gameObject);
                 }
             }
 
-            // Destroy the projectile
+            // Destroy the projectile regardless
             Destroy(otherGO);
         }
         else
         {
-            // If it’s not a ProjectileHero, print a debug message
+            // If itï¿½s not a ProjectileHero, print a debug message
             print("Enemy hit by non-projectile hero: " + otherGO.name);
         }
     }

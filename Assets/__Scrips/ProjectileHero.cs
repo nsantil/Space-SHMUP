@@ -50,19 +50,4 @@ public class ProjectileHero : MonoBehaviour
         get { return rigid.velocity; }
         set { rigid.velocity = value; }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
